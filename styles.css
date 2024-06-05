@@ -1,3 +1,10 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgray;
+}
+
 .canvas-container {
     max-width: 1200px;
     margin: auto;
@@ -25,48 +32,32 @@ canvas {
     position: absolute;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: lightgray;
-}
-
 ul {
     list-style: none;
     padding-left: 5px;
 }
 
-
-.bar {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: auto;
+.bar, .header, .content, footer {
     max-width: 1440px;
-    background-color: #f9f9fb;
+    margin: auto;
     padding: 15px;
     border: solid 1px #cdcdcd;
+    background-color: #f9f9fb;
 }
 
 .content {
     background-color: white;
-    max-width: 1440px;
-    margin: auto;
     grid-gap: 3rem;
     display: grid;
     gap: 3rem;
     grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 footer {
     background-color: white;
-    margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: 1440px;
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
 }
@@ -84,14 +75,6 @@ figure {
     text-align: center;
 }
 
-.header {
-    max-width: 1440px;
-    margin: auto;
-    background-color: #f9f9fb;
-    padding: 15px;
-    border: solid 1px #cdcdcd;
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -100,11 +83,32 @@ figure {
     padding: 0 1rem;
 }
 
-
 button {
     background-color: blue;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+/* Animations */
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 }

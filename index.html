@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-AVl</title>
+    <title>Web-AVL</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header class="header">
-    <div class="logo"><img src="" alt="" width="200">AVL</div>
+    <div class="logo">
+        <img src="" alt="Logo AVL" width="200"> AVL
+    </div>
 </header>
 
-
 <div class="bar"></div>
+
 <div class="bg">
     <div class="content">
         <div class="sidebar">
             <h2>Ações</h2>
             <ul>
-                <li><input type="number" id="valueInput" placeholder="Digite um número"></li>
-                <li><button onclick="addValue()">Adicionar</button>  <button onclick="avl.clear()"> Limpar</button></li>
+                <li>
+                    <label for="valueInput">Digite um número</label>
+                    <input type="number" id="valueInput" placeholder="Digite um número">
+                </li>
+                <li>
+                    <button onclick="addValue()">Adicionar</button>
+                    <button onclick="clearTree()">Limpar</button>
+                </li>
             </ul>
         </div>
 
@@ -29,10 +36,10 @@
             <div class="canvas-container">
                 <canvas id="avlCanvas"></canvas>
             </div>
-            <script src="script.js"></script>
         </main>
     </div>
 </div>
+
 <footer>
     <p>Site Criado por:</p>
     <ul>
@@ -43,5 +50,6 @@
     </ul>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
